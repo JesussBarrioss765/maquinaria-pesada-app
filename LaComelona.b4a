@@ -1,0 +1,169 @@
+﻿Build1=Default,b4a.example
+File1=1.bal
+File10=doogie_1.png
+File11=hamburguesa.png
+File12=info.png
+File13=informe.bal
+File14=Iniciar.bal
+File15=iniciar_sesion.bal
+File16=laimperial.png
+File17=Layout.bal
+File18=listado.bal
+File19=logo.jpg
+File2=2.bal
+File20=logo_gestic.png
+File21=logo_upc.png
+File22=logoentidad.png
+File23=lupa.png
+File24=magna.png
+File25=mas.png
+File26=membrete la comelona.png
+File27=membrete la comelona1.png
+File28=menos.png
+File29=MENU.bal
+File3=93818.png
+File30=perros.png
+File31=perros1.png
+File32=salchipapa.png
+File33=saludo_universidad.bal
+File34=v2.jpg
+File35=v3.jpg
+File36=v4.jpg
+File4=admin.bal
+File5=carrito.png
+File6=ChatGPT Image 18 sept 2025, 19_16_15.png
+File7=comelona.png
+File8=Crear_usuario.bal
+File9=doogie.png
+FileGroup1=Default Group
+FileGroup10=Default Group
+FileGroup11=Default Group
+FileGroup12=Default Group
+FileGroup13=Default Group
+FileGroup14=Default Group
+FileGroup15=Default Group
+FileGroup16=Default Group
+FileGroup17=Default Group
+FileGroup18=Default Group
+FileGroup19=Default Group
+FileGroup2=Default Group
+FileGroup20=Default Group
+FileGroup21=Default Group
+FileGroup22=Default Group
+FileGroup23=Default Group
+FileGroup24=Default Group
+FileGroup25=Default Group
+FileGroup26=Default Group
+FileGroup27=Default Group
+FileGroup28=Default Group
+FileGroup29=Default Group
+FileGroup3=Default Group
+FileGroup30=Default Group
+FileGroup31=Default Group
+FileGroup32=Default Group
+FileGroup33=Default Group
+FileGroup34=Default Group
+FileGroup35=Default Group
+FileGroup36=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=accessibility
+Library10=okhttputils2
+Library11=phone
+Library12=reflection
+Library13=runtimepermissions
+Library14=xui
+Library15=stringutils
+Library2=animation
+Library3=camera
+Library4=core
+Library5=dateutils
+Library6=ime
+Library7=javaobject
+Library8=json
+Library9=okhttp
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~SetApplicationAttribute(android:usesCleartextTraffic, "true")~\n~~\n~AddPermission ("android.permission.WRITE_EXTERNAL_STORAGE")~\n~AddPermission ("android.permission.READ_EXTERNAL_STORAGE")~\n~~\n~~\n~'************ Google Play Services Base ************~\n~AddApplicationText(~\n~   <activity android:name="com.google.android.gms.common.api.GoogleApiActivity"~\n~  android:theme="@android:style/Theme.Translucent.NoTitleBar"~\n~  android:exported="false"/>~\n~    <meta-data~\n~  android:name="com.google.android.gms.version"~\n~  android:value="@integer/google_play_services_version" />~\n~)~\n~'************ Google Play Services Base (end) ************~\n~AddApplicationText(<meta-data~\n~    android:name="com.google.android.gms.vision.DEPENDENCIES"~\n~    android:value="barcode,,face" />~\n~)~\n~~\n~AddPermission(android.permission.INTERNET)~\n~
+Module1=admin1
+Module10=ver_datos
+Module2=Camara
+Module3=CameraExClass
+Module4=crear_usuario
+Module5=Mod1
+Module6=principal
+Module7=Singin
+Module8=Starter
+Module9=ventas
+NumberOfFiles=36
+NumberOfLibraries=15
+NumberOfModules=10
+Version=13.4
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: GESTIC App
+	#VersionCode: 2
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: true
+#End Region
+
+#AdditionalJar: com.google.android.gms:play-services-vision
+#BridgeLogger: true
+
+#Region  Activity Attributes 
+	#FullScreen: true
+	#IncludeTitle: false
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private Label1 As Label
+	Private Button_ventas As Button
+	Private Button_inv As Button
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("saludo_universidad")
+	Mod1.GetFontScale
+	Label1.TextSize = Mod1.Scale_Font(32)
+    Sleep(3000)
+	Activity.Finish
+	'StartActivity(crear_usuario)
+	'StartActivity(Camara)
+	StartActivity(Singin)
+	
+	
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+
+End Sub
+
+Sub Button1_Click
+
+
+End Sub
+
+Private Sub Button_inv_Click
+	
+End Sub
+
+Private Sub Button_ventas_Click
+	
+End Sub
